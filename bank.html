@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- website title  -->
-    <title>DOM Bank with Function</title>
+    <title>DOM Bank with Function Dashboard</title>
     <!-- google font link  -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -31,11 +31,81 @@
     </header>
 
     <!-- main start  -->
+    <!-- display section start  -->
+    <section class="my-20 w-9/12 mx-auto">
+      <div class="grid grid-cols-3 gap-4">
+        <!-- deposit display box  -->
+        <div class="bg-yellow-500 p-10 rounded-lg text-center">
+          <h4 class="font-bold text-5xl mb-5">Deposit</h4>
+          <h2 class="font-bold text-6xl">
+            $<span id="deposit-total">00</span>
+          </h2>
+        </div>
+        <!-- withdraw display box  -->
+        <div class="bg-yellow-500 p-10 rounded-lg text-center">
+          <h4 class="font-bold text-5xl mb-5">Withdraw</h4>
+          <h2 class="font-bold text-6xl">
+            $<span id="withdraw-total">00</span>
+          </h2>
+        </div>
+        <!-- balance display box  -->
+        <div class="bg-yellow-500 p-10 rounded-lg text-center">
+          <h4 class="font-bold text-5xl mb-5">Balance</h4>
+          <h2 class="font-bold text-6xl">
+            $<span id="balance-total">1000</span>
+          </h2>
+        </div>
+      </div>
+    </section>
+
+    <!-- deposit and withdraw section start  -->
+    <section class="my-20 w-9/12 mx-auto">
+      <div class="grid grid-cols-2 gap-4">
+        <!-- deposit entry box -->
+        <div class="bg-yellow-500 p-8 rounded-lg">
+          <h2 class="font-semibold text-4xl mb-5">Please Deposit</h2>
+          <input
+            type="text"
+            placeholder="Please enter your deposit amount"
+            class="block w-9/12 px-4 py-3 mb-5"
+            id="deposit-field"
+          />
+          <button
+            class="bg-zinc-800 px-3 py-2 rounded text-white font-semibold"
+            id="btn-deposit"
+          >
+            Submit
+          </button>
+        </div>
+
+        <!-- withdraw entry box -->
+        <div class="bg-yellow-500 p-8 rounded-lg">
+          <h2 class="font-semibold text-4xl mb-5">Please Withdraw</h2>
+          <input
+            type="text"
+            placeholder="Please enter your withdraw amount"
+            class="block w-9/12 px-4 py-3 mb-5"
+            id="withdraw-field"
+          />
+          <button
+            class="bg-zinc-800 px-3 py-2 rounded text-white font-semibold"
+            id="btn-withdraw"
+          >
+            Submit
+          </button>
+        </div>
+      </div>
+    </section>
     <!-- footer start  -->
-    <footer class="bg-yellow-500 p-5 fixed bottom-0 left-0 right-0">
+    <footer class="bg-yellow-500 p-3">
       <p class="text-center font-semibold text-2xl">
         © 2023 DOM BANK 2. All rights reserved.
       </p>
     </footer>
+
+    <!-- External JS script  -->
+    <script src="js/utilities.js"></script>
+    <script src="js/deposit.js"></script>
+    <script src="js/withdraw.js"></script>
   </body>
 </html>
